@@ -57,9 +57,6 @@ local options = {
   mousemoveevent = true,
   syntax = "off",
 }
--- set default language to en_US
-vim.api.nvim_exec ('language en_US', true)
-
 -- remove the ~ symbol in blank line
 vim.api.nvim_set_option('fillchars', 'eob: ')
 
