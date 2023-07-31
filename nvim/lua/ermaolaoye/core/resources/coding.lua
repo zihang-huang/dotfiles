@@ -123,8 +123,13 @@ return {
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
+end,
+},
+
+  {
+'anuvyklack/pretty-fold.nvim',
+    config = function()
+      require('pretty-fold').setup()
     end,
   }
-
-
 }
