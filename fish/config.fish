@@ -10,3 +10,5 @@ function fish_greeting
 end
 
 thefuck --alias | source
+
+export LANG=en_US.UTF-8
