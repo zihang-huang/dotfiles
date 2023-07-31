@@ -71,3 +71,8 @@ if vim.g.neovide then
   vim.opt.guifont = "CaskaydiaCove Nerd Font:h13" -- the font used in graphical neovim applications
   vim.g.neovide_scale_factor = 1
 end
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  command = "setlocal shiftwidth=2 tabstop=2"
+})
