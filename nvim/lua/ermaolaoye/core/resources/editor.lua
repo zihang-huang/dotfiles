@@ -26,10 +26,40 @@ return {
 
     opts = {
       close_if_last_window = true,
-      popup_border_style = "rounded",
-      -- color hidden items
-      show_hidden_files = true,
+      default_component_configs = {
+        modified = { symbol = "" },
+        git_status = {
+          symbols = {
+            added = "",
+            modified = "",
+            removed = "",
+            renamed = "➜",
+            untracked = "",
+            ignored = "",
+            unstaged = "󰬜",
+            staged = "",
+            conflict = "",
+            deleted = "",
+          }
+        }
+      },
     },
+
+    config = function(_, opts)
+      vim.fn.sign_define("DiagnosticSignError",
+        {text = " ", texthl = "DiagnosticSignError"})
+      vim.fn.sign_define("DiagnosticSignWarn",
+        {text = " ", texthl = "DiagnosticSignWarn"})
+      vim.fn.sign_define("DiagnosticSignInfo",
+        {text = "󰰅 ", texthl = "DiagnosticSignInfo"})
+      vim.fn.sign_define("DiagnosticSignHint",
+        {text = "󰘥 ", texthl = "DiagnosticSignHint"})
+
+      local nt = require("neo-tree")
+      nt.setup(opts)
+
+
+    end
   },
 
   {
@@ -97,7 +127,7 @@ return {
 
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    dependencies = { 
+    dependencies = {
       'nvim-lua/plenary.nvim',
     },
 
