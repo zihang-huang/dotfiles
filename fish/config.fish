@@ -12,3 +12,5 @@ end
 thefuck --alias | source
 
 export LANG=en_US.UTF-8
+
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
