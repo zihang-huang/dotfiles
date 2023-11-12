@@ -30,7 +30,6 @@ local servers = {
   clangd = {},
   pyright = {},
   rust_analyzer = {},
-  gopls = {},
   ltex = {},
   marksman = {},
 }
