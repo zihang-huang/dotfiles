@@ -1,3 +1,2 @@
-require("ermaolaoye.core.options")
-require("ermaolaoye.core.keymaps")
-require("ermaolaoye.plugins-setup")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
