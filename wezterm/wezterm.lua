@@ -9,13 +9,15 @@ config.color_scheme = "Dracula (base16)"
 
 -- Font
 config.font = wezterm.font("Cascadia Code NF")
-config.font_size = 13
+config.font_size = 15
 
 -- Tab Bar
 config.use_fancy_tab_bar = true
 config.tab_bar_at_bottom = true
+config.hide_tab_bar_if_only_one_tab = true
 
 config.window_background_opacity = 0.8
+config.macos_window_background_blur = 10
 
 config.window_decorations = "RESIZE"
 config.window_padding = {
@@ -24,6 +26,10 @@ config.window_padding = {
 	right = 5,
 	bottom = 0,
 }
+
+config.default_cursor_style = "BlinkingBlock"
+config.animation_fps = 1
+config.cursor_blink_rate = 1000
 
 -- Change Deafult Shell
 if string.find(wezterm.target_triple, "windows") then

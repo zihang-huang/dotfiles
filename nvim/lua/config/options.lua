@@ -5,4 +5,8 @@
 local opt = vim.opt
 
 opt.wrap = true
-opt.shell = "powershell.exe -NoLogo"
+
+-- Only set PowerShell as shell on Windows
+if vim.loop.os_uname().sysname == "Windows_NT" then
+  opt.shell = "powershell.exe -NoLogo"
+end
