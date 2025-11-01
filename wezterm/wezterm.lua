@@ -8,7 +8,7 @@ local act = wezterm.action
 config.color_scheme = "Dracula (base16)"
 
 -- Font
-config.font = wezterm.font("Cascadia Code NF")
+config.font = wezterm.font_with_fallback({ "Cascadia Code NF", "Noto Sans SC" })
 config.font_size = 15
 
 -- Tab Bar
