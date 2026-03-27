@@ -4,6 +4,7 @@
 
 local map = LazyVim.safe_keymap_set
 
-map("i", "jk", "<Esc>", { desc = "Exit insert mode with jk", remap = false })
+-- Always available, works in terminal + VSCode
+
 map("n", "<leader>fw", "<cmd>w<cr><esc>", { desc = "Save Files" })
 map("n", "<leader>fq", "<cmd>q<cr><esc>", { desc = "Quit" })

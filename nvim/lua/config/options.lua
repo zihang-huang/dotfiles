@@ -10,3 +10,6 @@ opt.wrap = true
 if vim.loop.os_uname().sysname == "Windows_NT" then
   opt.shell = "powershell.exe -NoLogo"
 end
+
+vim.g.lazyvim_python_lsp = "ty"
+vim.g.lazyvim_python_ruff = "ruff" -- optional, but common

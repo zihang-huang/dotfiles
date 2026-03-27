@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "BingXing": {
+      "options": {
+        "npm": "@ai-sdk/openai-compatible",
+        "baseURL": "https://llmapi.paratera.com/v1"
+      },
+      "models": {
+        "GLM-5": {},
+        "MiniMax-M2.5": {},
+      },
+    }
+  }
+}
